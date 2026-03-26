@@ -38,7 +38,7 @@ void nhapPhanSo(PhanSo &ps){
 Hàm gcd
 Input: 2 số nguyên
 Output: UCLN
-Chức năng: dùng thuật toán Euclid dạng lặp
+Chức năng: dùng thuật toán Euclid
 */
 int gcd(int a, int b){
     a = abs(a);
