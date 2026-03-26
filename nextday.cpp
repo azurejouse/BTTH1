@@ -2,7 +2,7 @@
 using namespace std;
 /*
 Struct Date
-Chức năng: lưu ngày (d), tháng (m), năm (y)
+Chức năng: lưu d, m, y
 */
 struct Date{
     int d, m, y;
@@ -56,7 +56,7 @@ Input: biến Date
 Output: ngày hợp lệ
 Chức năng:
 - Nhập ngày, tháng, năm
-- Kiểm tra hợp lệ (tháng 1-12, ngày đúng theo tháng)
+- Kiểm tra hợp lệ
 - Nếu sai thì nhập lại
 */
 void nhapDate(Date &a){
