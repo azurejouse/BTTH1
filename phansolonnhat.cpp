@@ -13,7 +13,7 @@ Input: không
 Output: phân số hợp lệ (mẫu ≠ 0, đúng định dạng)
 Chức năng:
 - Nhập tử và mẫu
-- Kiểm tra lỗi nhập (ký tự, chữ)
+- Kiểm tra lỗi nhập
 - Bắt nhập lại nếu sai
 */
 void nhapPhanSo(PhanSo &ps){
@@ -32,13 +32,13 @@ void nhapPhanSo(PhanSo &ps){
         }
         if (ps.mau == 0)
             cout << "Nhap lai phan so!\n";
-    } while (ps.mau == 0);
+    }while (ps.mau == 0);
 }
 /*
 Hàm gcd
 Input: 2 số nguyên
 Output: UCLN
-Chức năng: phục vụ rút gọn
+Chức năng: rút gọn theo euclid
 */
 int gcd(int a, int b){
     a = abs(a);
