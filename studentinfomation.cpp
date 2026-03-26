@@ -1,21 +1,15 @@
 #include <iostream>
 #include <string>
 using namespace std;
-// Cấu trúc dữ liệu
+// Cấu trúc dữ liệu cho tên hs và điểm toánn, văn
 struct HocSinh{
     string ten;
     float toan, van;
 };
 /*
- Tính năng: Kiểm tra tính hợp lệ của tên người dùng nhập vào.
- s: Chuỗi (string) tên cần kiểm tra.
- true: Nếu tên chỉ chứa chữ cái (a-z, A-Z) và khoảng trắng.
- false: Nếu tên trống hoặc chứa ký tự đặc biệt/số.
- */
-/**
- * Tinh nang: Kiem tra ten hop le (chi chua chu cai va khoang trang)
- * Dau vao: Chuoi s (ten nguoi dung nhap)
- * Dau ra: true neu hop le, false neu co ky tu la hoac rong
+ - Chức năng: Kiem tra ten hop le
+ - Input: Chuoi s (ten)
+ - Output: true neu hop le, false neu co ky tu la hoac rong
  */
 bool hopLeTen(string s){
     // Neu chuoi rong thi tra ve sai luon
@@ -26,9 +20,9 @@ bool hopLeTen(string s){
     for (int i = 0; i < (int)s.length(); i++){
         // Lay ky tu tai vi tri i ra de kiem tra
         char c = s[i]; 
-        // Kiem tra: Neu c KHONG phai chu cai VA cung KHONG phai khoang trang
+        // Kiem tra: Neu c khong phai chu cai va cung khong phai khoang trang
         if (!(isalpha(c) || isspace(c))) {
-            return false; // Gap ky tu la (so, dau cham,...) la loai ngay
+            return false; // Gap ky tu la la loai ngay
         }
     }
     // Neu kiem tra het ca chuoi ma moi thu deu on thi tra ve dung
@@ -36,22 +30,22 @@ bool hopLeTen(string s){
 }
 /*
  Chưc năng: Thực hiện nhập tên từ bàn phím và ép buộc người dùng nhập đúng định dạng.
- Một chuỗi tên đã được kiểm tra tính hợp lệ.
+ Output: Một chuỗi tên hợp lệ.
  */
 string nhapTen(){
     string s;
     while (true){
         cout << "Nhap ho ten: ";
-        // ưs dung đẻe xử lýdòng thừa còn sót lại trong bộ đệm
+        // ws dung đẻe xử lýdòng thừa còn sót lại trong bộ đệm
         getline(cin >> ws, s); 
         if (hopLeTen(s)) return s;
         cout << "Ten khong hop le (chi duoc chu va khoang trang)!\n";
     }
 }
 /*
- Tính năng: Nhập điểm số và kiểm tra điều kiện điểm phải nằm trong khoảng [0, 10].
- msg: Chuỗi thông báo hiển thị cho người dùng (ví dụ: "Nhap diem Toan: ").
- Một số thực (float) có giá trị từ 0 đến 10.
+ Chức năng: Nhập điểm số và kiểm tra điều kiện điểm phải nằm trong khoảng [0, 10].
+ msg: Chuỗi thông báo hiển thị
+ Một số thực có giá trị từ 0 đến 10.
  */
 float nhapDiem(string msg) {
     float x;
@@ -69,8 +63,8 @@ float nhapDiem(string msg) {
 }
 /*
  Chức năng: Tính toán điểm trung bình cộng của hai môn học.
- hs: Một biến kiểu cấu trúc HocSinh (chứa điểm toán và văn).
- Giá trị trung bình (float) theo công thức: (Toan + Van) / 2.
+ hs: Một biến kiểu cấu trúc HocSinh.
+ Giá trị trung bình theo công thức: (Toan + Van) / 2.
  */
 float diemTB(HocSinh hs){
     return (hs.toan + hs.van) / 2;
