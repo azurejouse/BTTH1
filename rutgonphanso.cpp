@@ -2,7 +2,7 @@
 using namespace std;
 /*
 Struct PhanSo
-Chức năng: lưu tử số (tu) và mẫu số (mau) của một phân số
+Chức năng: lưu tử số và mẫu sốcủa một phân số
 */
 struct PhanSo{
     int tu, mau;
@@ -13,7 +13,7 @@ Input: không
 Output: phân số hợp lệ (mẫu ≠ 0, đúng định dạng số nguyên)
 Chức năng:
 - Nhập tử và mẫu
-- Kiểm tra lỗi nhập (nhập chữ/ký tự)
+- Kiểm tra lỗi nhập
 - Kiểm tra mẫu khác 0
 - Nếu sai thì yêu cầu nhập lại
 */
@@ -42,7 +42,7 @@ Hàm gcd
 Input: 2 số nguyên a, b
 Output: ước chung lớn nhất của a và b
 Chức năng:
-- Sử dụng thuật toán Euclid (dạng lặp)
+- Sử dụng thuật toán Euclid
 - Dùng để rút gọn phân số
 */
 int gcd(int a, int b){
@@ -75,7 +75,7 @@ Output: in ra phân số theo dạng đẹp:
 - tu = mau → in 1
 - mau = 1 → in tu
 - còn lại → in tu/mau
-Chức năng: chuẩn hóa cách hiển thị kết quả
+Chức năng: hiển thị kết quả đầu ra đẹp
 */
 void xuatPhanSo(PhanSo ps){
     // đưa dấu âm về tử
@@ -105,9 +105,9 @@ Chức năng:
 */
 int main(){
     PhanSo ps;
-    nhapPhanSo(ps);   // nhập dữ liệu
-    rutGon(ps);       // rút gọn
+    nhapPhanSo(ps);
+    rutGon(ps);       
     cout << "Phan so sau rut gon: ";
-    xuatPhanSo(ps);   // xuất kết quả
+    xuatPhanSo(ps);
     return 0;
 }
